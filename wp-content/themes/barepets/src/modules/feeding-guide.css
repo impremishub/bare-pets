@@ -1,0 +1,47 @@
+.module--feeding-guide {
+    @apply text-white relative py-5px;
+
+    &.bg-orange {
+        @apply bg-red;
+
+        .decor-top {
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTI4MCIgaGVpZ2h0PSIyNTEiIHZpZXdCb3g9IjAgMCAxMjgwIDI1MSI+CiAgPGRlZnM+CiAgICA8Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCI+CiAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGVfMTI0NCIgZGF0YS1uYW1lPSJSZWN0YW5nbGUgMTI0NCIgd2lkdGg9IjEyODAiIGhlaWdodD0iMjUxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDIzMjYpIiBmaWxsPSIjZmZmIiBzdHJva2U9IiM3MDcwNzAiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGcgaWQ9Ik1hc2tfR3JvdXBfNzMiIGRhdGEtbmFtZT0iTWFzayBHcm91cCA3MyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjMyNikiIGNsaXAtcGF0aD0idXJsKCNjbGlwLXBhdGgpIj4KICAgIDxwYXRoIGlkPSJCYXNlNSIgZD0iTTAsNzU3LjIzNHMxMjQuMzkyLTY1LjkzOSwzODYuMDYxLTY1LjkzOSw0MTAuNCw0NC4zNDksNjYwLjYxNSw2NS45MzksMzM1LjE1OS0zNy43NTIsMzM1LjE1OS0zNy43NTJsMjEuMzI4LTY4OS4wMnMtMTAyLjYtMTIwLjMxNS0zNTYuNDg3LTEzOS42N1M2NTkuODQ0LTYzLjczNSwzODYuMDYxLTYzLjczNSwwLTI2Ny4xOTMsMC0yNjcuMTkzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYyLjU1MyAyNTMyLjA0OCkgcm90YXRlKDIpIiBmaWxsPSIjZWI1YjU2Ii8+CiAgPC9nPgo8L3N2Zz4K') bottom center no-repeat;
+            background-size: contain;
+            @apply absolute top-0 left-0 w-full translate-y-[-99%] overflow-hidden;
+    
+            &:before {
+                content: '';
+                @apply block pt-[20%];
+            }
+        }
+    
+        .decor-bot {
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgwIiBoZWlnaHQ9IjIwNy4zMjkiIHZpZXdCb3g9IjAgMCAxMjgwIDIwNy4zMjkiPgogIDxwYXRoIGlkPSJQYXRoXzI2OTk0IiBkYXRhLW5hbWU9IlBhdGggMjY5OTQiIGQ9Ik04NDAwLDI0ODAuNTQxczExNi4yLDE3Ni43MDcsNDI0LjI0NSwxNDYuNjg4LDYxNC44NC0xMTMuNjU0LDg1NS43NTUsNjAuNjQxVjI0ODAuNTQxWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTg0MDAgLTI0ODAuNTQxKSIgZmlsbD0iI2ViNWI1NiIvPgo8L3N2Zz4K') top center no-repeat;
+            background-size: contain;
+            @apply absolute bottom-0 left-[-1px] w-[101%] translate-y-[99%] overflow-hidden z-[1];
+    
+            &:before {
+                content: '';
+                @apply block pt-[17%];
+            }
+        }
+    }
+
+    .feeding {
+        &--chart { 
+            @apply max-w-[895px] mx-auto md:flex md:justify-between;
+        }
+
+        &-text {
+            @apply md:flex-40%;
+        }
+
+        &-chart {
+            @apply md:flex-55% mt-20px md:mt-0;
+        }
+    }
+
+    & + .module {
+        @apply pt-100px md:pt-200px;
+    }
+}

@@ -1,0 +1,23 @@
+.btn {
+    @apply inline-block py-10px px-30px transition-all rounded-30px text-16px font-futurabold uppercase cursor-pointer;
+
+    &-primary {
+        @apply bg-mint text-white border border-mint; 
+
+        &:hover {
+            @apply bg-lightpurple border-lightpurple text-black;
+        }
+    }
+
+    &-secondary {
+        @apply bg-transparent border text-purple border-purple;
+    }
+
+    &-tertiary {
+        @apply bg-red text-white;
+    }
+
+    &-lightpurple {
+        @apply bg-lightpurple text-white;
+    }
+}
