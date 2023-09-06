@@ -2,6 +2,8 @@
     $heading = get_field('benefit_heading');
     $intro = get_field('benefit_intro');
     $background = get_field('benefit_background');
+    global $product;
+    $id = $product->get_id();   
 ?>
 
 <section class="module module--benefits">
@@ -13,6 +15,7 @@
         <?php if( have_rows('benefits') ): ?>
             <div class="benefits">
                 <?php while( have_rows('benefits') ): the_row(); ?>
+                <div class="benefits--holder">
                     <div class="benefits--item">
                         <?php 
                             $tagline = get_sub_field('tagline');
@@ -35,6 +38,10 @@
                             <?= $desc ?>
                         </div>
                     </div>
+                    <div class="benefits-shop-now">
+                        <a href="#product-<?= $id ?>">SHOP NOW</a>
+                    </div>
+                </div>    
                 <?php endwhile ?>
             </div>
         <?php endif ?>

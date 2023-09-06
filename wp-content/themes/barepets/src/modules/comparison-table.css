@@ -140,4 +140,18 @@
         background-size: contain;
         @apply absolute top-0 right-0 w-40px md:w-100px h-[275px] z-[1];
     }
+
+    &.dry {
+        .decor-top-right {
+            background: url('./img/dry-decor-top-compare.png') top right no-repeat;
+            width: 306px;
+            height: 261px;
+            zoom: 55%;
+            top: 15%;
+            right: 2%;
+        }
+        .decor-bottom-left {
+            @apply hidden;
+        }
+    }
 }

@@ -136,6 +136,14 @@ function my_remove_breadcrumbs() {
 // Remove product images from the shop loop
 remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
 
+add_action( 'woocommerce_before_shop_loop_item_title','wc_template_loop_product_replaced_thumb', 10 );
+
+function wc_template_loop_product_replaced_thumb() {
+	$shop_image = get_field('shop_page_image', $product); ?>
+	<div class="shop--image">
+	<img data-src="<?= $shop_image ?>" src="<?= get_template_directory_uri() ?>/img/placeholder.png" alt="">
+	</div>
+<?php }
 
 /** REMOVE WOOCOMMERCE TABS */
 add_filter( 'woocommerce_product_tabs', '__return_empty_array', 98 );
@@ -188,6 +196,7 @@ function custom_title() {
 	<div class="product-info__description <?= $type ?>">
 		<?= $product->get_description(); ?>
 	</div>
+
 <?php }
 
 
@@ -210,4 +219,45 @@ function modules() {
     get_template_part('blocks/module', 'faqs');
 }
 
+// Remove SHOP show all results
+remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
 
+// remove SHOP default sorting
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+
+// remove SHOP title
+remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
+
+add_action( 'woocommerce_shop_loop_item_title','wc_template_loop_product_replaced_title', 10 );
+
+function wc_template_loop_product_replaced_title() {
+	$shop_product_title = get_field('shop_product_title', $product); ?>
+	<h2 class="woocommerce-loop-product__title">
+		<?= $shop_product_title ?>
+	</h2>
+<?php }
+
+
+
+/**
+*Add View Product to Shop Page
+*/
+add_action('woocommerce_after_shop_loop_item', 'wptechnic_custom_button_view_product', 10 );
+function wptechnic_custom_button_view_product() {
+    global $product;
+
+    // Ignore for Variable and Group products
+    //if( $product->is_type('variable') || $product->is_type('grouped') ) return;
+
+    // Display the custom button
+    echo '<a style="margin-left:5px" class="button button-border" href="' . esc_attr( $product->get_permalink() ) . '">' . __('View product') . '</a>';
+}
+
+
+// Add Modules to Shop Page
+add_action( 'woocommerce_after_main_content', 'modal', 10);
+
+function modal() {
+    get_template_part('blocks/module', 'text-scroller');
+	get_template_part('blocks/module', 'shop-subscription');
+}

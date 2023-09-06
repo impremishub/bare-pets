@@ -6,10 +6,11 @@
     $background     = get_field('compare_background', 'option') && !is_page() > 0 ? get_field('compare_background', 'option') :  get_field('background');
     $main           = get_field('compare_main_table', 'option') && !is_page() > 0 ? get_field('compare_main_table', 'option') :  get_field('main_table');
     $cta            = get_field('compare_cta', 'option') && !is_page() > 0 ? get_field('compare_cta', 'option') : get_field('cta');
+    $type = get_field('food_type');
 ?>
 
 
-<section class="module module--comparison-table <?= $background ?> <?= $className ?>">
+<section class="module module--comparison-table <?= $background ?> <?= $className ?> <?= $type ?>">
     
     <div class="wrapper">
         <h4 class="module-subtitle"><?= $subtitle ?></h4>

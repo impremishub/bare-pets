@@ -5,11 +5,21 @@
         @apply flex;
 
         li {
-            @apply ml-20px py-10px relative;
+            @apply ml-20px py-10px pr-20px relative;
+            letter-spacing: 1.4px;
 
             &:hover {
                 ul.sub-menu {
                     @apply block;
+                }
+            }
+
+            &.menu-item-has-children {
+                &:after {
+                    content: "\f078";
+                    font-family: "FontAwesome";
+                    font-size: 10px;
+                    @apply absolute right-0;
                 }
             }
         }
@@ -22,7 +32,8 @@
             @apply hidden border border-purple bg-white rounded-10px px-20px py-15px absolute top-[100%] left-0 w-180px;
 
             li {
-                @apply py-[6px] border-b border-purple m-0;
+                @apply py-[6px] border-b border-purple m-0 pr-0;
+                letter-spacing: 1.2px;
 
                 &:last-child {
                     @apply border-0;
@@ -116,6 +127,8 @@
 }
 
 .button-navigation {
+    @apply flex items-center;
+
     .btn-primary {
         @apply hidden md:block;
     }
@@ -187,4 +200,19 @@
             }
         }
     }
+
+    .cart--counter {
+        @apply ml-20px -mt-10px;
+    }
+
+    .cart--icon {
+        @apply relative;
+
+        .items-count {
+            @apply absolute -top-1 bg-mint text-white right-0 w-30px h-30px text-center;
+            line-height: 30px;
+            border-radius: 50%;
+        }
+    }
+    
 }

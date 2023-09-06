@@ -16,6 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<!-- Font Awesome Icons -->
+	<script src="https://use.fontawesome.com/872d49b404.js"></script>
 
 	<?php wp_head(); ?>
 
@@ -71,7 +73,14 @@
 							)
 						);
 						?>
+
+						<div class="cart--counter">
+							<a class="cart--icon" aria-current="page" href="/cart"><?= get_template_part('img/cart-header.svg') ?> 
+								<span class="items-count"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span>
+							</a>
+						</div>
 					</nav><!-- #site-navigation -->
+					
 				</div>
 			</div>
 		</div><!-- .site-branding -->

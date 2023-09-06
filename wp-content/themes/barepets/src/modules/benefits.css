@@ -13,8 +13,18 @@
     .benefits {
         @apply mt-40px flex justify-between flex-wrap relative max-w-[995px] mx-auto lg:grid;
 
+        &--holder {
+            @apply mb-10px md:mb-20px;
+
+            &:hover {
+                .benefits-shop-now {
+                    @apply opacity-100;
+                }
+            }
+        }
+
         &--item {
-            @apply relative flex-half md:flex-295 mb-10px md:mb-40px bg-white rounded-10px rounded-bl-0 flex items-center justify-center py-15px px-10px;
+            @apply relative flex-half md:flex-295 bg-white rounded-10px rounded-bl-0 flex items-center justify-center py-15px px-10px;
 
             box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.16);
             -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.16);
@@ -45,7 +55,7 @@
             ". r2c2 r2c3"
             ". r3c2 r3c3";
 
-            .benefits--item {
+            .benefits--holder {
                 &:nth-child(1) {
                     grid-area: r1c1;
                 }
@@ -160,13 +170,23 @@
                 }
             }
         }
+
+        &-shop-now {
+            @apply opacity-0;
+
+            a {
+                @apply font-futurabold uppercase text-mint;
+                background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNS4zMTEiIGhlaWdodD0iMTEuODUxIiB2aWV3Qm94PSIwIDAgMTUuMzExIDExLjg1MSI+CiAgPGcgaWQ9Ikdyb3VwXzM1MjkiIGRhdGEtbmFtZT0iR3JvdXAgMzUyOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTg1MC42NjcgLTQ0NS4wODYpIj4KICAgIDxwYXRoIGlkPSJQYXRoXzI2Njg0IiBkYXRhLW5hbWU9IlBhdGggMjY2ODQiIGQ9Ik04NTEuNjY3LDQ1MS40NjdoMTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTAuOTY3KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNmJjNWIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHBhdGggaWQ9IlBhdGhfMjY2ODUiIGRhdGEtbmFtZT0iUGF0aCAyNjY4NSIgZD0iTTg2MC40NjcsNDQ2LjM2NWw0LjUxMSw0LjUxMS00LjUxMSw0LjUxMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjEzNSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZiYzViMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8L2c+Cjwvc3ZnPgo=') 98% center no-repeat;
+                @apply pr-6 bg-right;
+            }
+        }
     }
 
     .foods {
         @apply w-[750px] flex mx-auto;
 
         &-wrapper {
-            @apply overflow-x-scroll lg:absolute bottom-100px right-[10%];
+            @apply overflow-x-scroll lg:absolute bottom-100px right-[15%];
 
             &::-webkit-scrollbar {
                 display: none;

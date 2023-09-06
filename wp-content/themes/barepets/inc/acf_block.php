@@ -194,7 +194,5 @@ function my_acf_init() {
             'icon'              => 'star-filled',
             'keywords'          => array( 'sample', 'block' ),
         ));
-
-        
     }
 }
