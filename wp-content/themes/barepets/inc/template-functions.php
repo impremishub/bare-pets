@@ -252,12 +252,3 @@ function wptechnic_custom_button_view_product() {
     // Display the custom button
     echo '<a style="margin-left:5px" class="button button-border" href="' . esc_attr( $product->get_permalink() ) . '">' . __('View product') . '</a>';
 }
-
-
-// Add Modules to Shop Page
-add_action( 'woocommerce_after_main_content', 'modal', 10);
-
-function modal() {
-    get_template_part('blocks/module', 'text-scroller');
-	get_template_part('blocks/module', 'shop-subscription');
-}

@@ -89,5 +89,9 @@ do_action( 'woocommerce_after_main_content' );
 //do_action( 'woocommerce_sidebar' ); ?>
 
 
-<?php 
+<?php
+
+get_template_part('blocks/module', 'text-scroller');
+get_template_part('blocks/module', 'shop-subscription');
+
 get_footer( 'shop' );

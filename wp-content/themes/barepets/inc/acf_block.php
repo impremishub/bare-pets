@@ -194,5 +194,50 @@ function my_acf_init() {
             'icon'              => 'star-filled',
             'keywords'          => array( 'sample', 'block' ),
         ));
+
+        // ABOUT PAGE
+        acf_register_block(array(
+            'name'              => 'about-info',
+            'title'             => __('About Info Block'),
+            'description'       => __('A custom about block.'),
+            'render_callback'   => 'impremis_block_callback',
+            'category'          => 'impremis',
+            'icon'              => 'embed-photo',
+            'keywords'          => array( 'text', 'media', 'text-with-media' ),
+        ));
+
+        // VET TESTI
+        acf_register_block(array(
+            'name'              => 'vet-testi',
+            'title'             => __('Vet Testimonials'),
+            'description'       => __('A custom vet testimonials block.'),
+            'render_callback'   => 'impremis_block_callback',
+            'category'          => 'impremis',
+            'icon'              => 'media-text',
+            'keywords'          => array( 'text', 'media', 'text-with-media' ),
+        ));
+
+         // Core Values
+         acf_register_block(array(
+            'name'              => 'core-values',
+            'title'             => __('Core Values'),
+            'description'       => __('A custom core values block.'),
+            'render_callback'   => 'impremis_block_callback',
+            'category'          => 'impremis',
+            'icon'              => 'embed-photo',
+            'keywords'          => array( 'text', 'media', 'text-with-media' ),
+        ));
+
+
+         // Purpose
+         acf_register_block(array(
+            'name'              => 'purpose',
+            'title'             => __('Purpose'),
+            'description'       => __('A custom purpose block.'),
+            'render_callback'   => 'impremis_block_callback',
+            'category'          => 'impremis',
+            'icon'              => 'media-text',
+            'keywords'          => array( 'text', 'media', 'text-with-media' ),
+        ));
     }
 }

@@ -6,6 +6,8 @@
     $id = $product->get_id();   
 ?>
 
+<?php if($heading) : ?>
+
 <section class="module module--benefits">
     <?= !empty($background['mobile']) && !empty($background['desktop']) ? responsive_image( $background['mobile'], $background['desktop'], 'bg' ) : null ?>
     <div class="wrapper">
@@ -70,3 +72,5 @@
         </div>
     <?php endif ?>
 </section>
+
+<?php endif; ?>

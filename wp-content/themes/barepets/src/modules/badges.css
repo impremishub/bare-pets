@@ -10,7 +10,7 @@
     }
 
     &.subscription {
-        @apply bg-[lightblue];
+        @apply bg-lightblue;
     }
 
     .badges {

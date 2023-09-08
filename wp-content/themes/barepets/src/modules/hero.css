@@ -141,3 +141,33 @@
         }
     }
 }
+
+/* About Page Hero */
+.page-id-282 {
+    .module--hero {
+        .kibble {
+            @apply hidden;
+        }
+    }
+    .hero-content {
+        .wrapper {
+            @apply text-right ml-auto;
+            margin-right: 15%;
+
+            h2 {
+                @apply text-purple mt-0;
+                max-width: 550px;
+                font-size: 65px;
+                line-height: 75px;
+            }
+            p {
+                @apply relative pr-100px pt-40px;
+
+                .arrow-icon {
+                    @apply absolute -right-30px -top-65px;
+                    max-width: 177px;
+                }
+            }
+        }
+    }
+}

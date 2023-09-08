@@ -4,7 +4,11 @@
 
         &.columns-3 {
             li.product {
-                @apply w-4/12;
+                @apply md:w-4/12;
+
+                @media (max-width:768px) {
+                    @apply w-full mb-0;
+                }
             }
         }
 
@@ -95,7 +99,7 @@
 }
 
 .module-subscription-model {
-    @apply pb-200px;
+    @apply md:pb-200px;
 
     .module-title {
         @apply mb-4;
@@ -111,11 +115,23 @@
 
 .model {
     &--holder {
-        @apply flex relative z-50;
+        @apply relative z-50 md:flex;
         margin-top: -18em;
+
+        @media (max-width: 768px) {
+            @apply mt-0;
+        }
     }
     &--list {
-        @apply w-1/4 text-center mr-20px relative;
+        @apply text-center relative md:w-1/4 mr-20px;
+
+        img {
+            @apply w-full md:m-auto m-auto;
+
+            @media (max-width: 768px) {
+                width: 77%;
+            }
+        }
 
         .model-content {
             @apply absolute w-10/12;
@@ -127,12 +143,23 @@
                 @apply text-14px mt-15px;
                 line-height: normal;
             }
+
+            @media (max-width: 768px) {
+                width: 65%;
+                transform: translate(-50%,0);
+                top: 30%;
+                @apply m-auto;
+            }
         }
 
         &:last-child {
             img {
-                @apply max-w-none absolute top-0;
+                @apply max-w-none top-0 w-auto md:absolute;
                 right: -15%;
+
+                @media (max-width:768px) {
+                    @apply w-full right-0;
+                }
             }
         }
 
@@ -140,4 +167,19 @@
             @apply mt-8;
         }
     }
+}
+.glsr-default {
+    background-color: #E0E0ECCC;
+    @apply p-25px rounded-25px;
+    
+
+    &[data-shortcode="site_reviews"] {
+        @apply bg-transparent p-0 rounded-none;
+    }
+}
+h2.woocommerce-Reviews-title {
+    @apply mb-10px;
+}
+.glsr-review-avatar img {
+    border-radius: 50%;
 }
