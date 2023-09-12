@@ -150,7 +150,9 @@
         }
     }
     .hero-content {
-        padding-top: 40px;
+        @media (max-width: 1440px) {
+            @apply pt-40px;
+        }
         
         .wrapper {
             @apply text-right ml-auto;

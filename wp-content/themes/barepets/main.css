@@ -2125,9 +2125,11 @@ img.absolute {
 .page-id-282 .module--hero .kibble {
 	display: none;
 }
+@media (max-width: 1440px) {
 .page-id-282 .hero-content {
-        padding-top: 40px;
-    }
+		padding-top: 40px;
+	}
+        }
 .page-id-282 .hero-content .wrapper {
 	margin-left: auto;
 	text-align: right;

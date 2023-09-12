@@ -17,6 +17,7 @@ vendor
 /wp-content/themes/index.php
 /wp-content/backup-db
 /wp-content/backups
+/wp-content/updraft
 /wp-content/plugins/
 /wp-content/mu-plugins
 /wp-content/upgrade/
