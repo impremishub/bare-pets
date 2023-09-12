@@ -140,12 +140,13 @@
 .core-values-list {
     @apply mt-40px;
 }
-.core-values-holder {
-    @apply items-start flex-wrap py-20px mb-35px;
+.core-values-holder, .list--holder {
+    @apply items-start flex-wrap px-20px mb-35px;
     flex: 0 0 50%;
 
     img {
         flex: 0 0 20%;
+        border-radius: 15px;
     }
     .core-values-text {
         flex: 0 0 70%;
@@ -176,5 +177,14 @@
 article#post-282 {
     .module--text-scroller {
         background: transparent linear-gradient(270deg, #F9CF4F 0%, #EA7B49 100%) 0% 0% no-repeat padding-box;
+    }
+}
+
+.floating-kibbles {
+    top: -3.5em;
+    right: 5em !important;
+
+    img {
+        max-width: 180px;
     }
 }

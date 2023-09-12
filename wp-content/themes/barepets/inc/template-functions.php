@@ -252,3 +252,6 @@ function wptechnic_custom_button_view_product() {
     // Display the custom button
     echo '<a style="margin-left:5px" class="button button-border" href="' . esc_attr( $product->get_permalink() ) . '">' . __('View product') . '</a>';
 }
+
+// REMOVE P tags in Contact Form 7
+add_filter('wpcf7_autop_or_not', '__return_false');

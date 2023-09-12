@@ -239,5 +239,28 @@ function my_acf_init() {
             'icon'              => 'media-text',
             'keywords'          => array( 'text', 'media', 'text-with-media' ),
         ));
+
+        // Breeders Program
+        acf_register_block(array(
+            'name'              => 'breeders-form',
+            'title'             => __('Breeders Form'),
+            'description'       => __('A custom Breeders Form block.'),
+            'render_callback'   => 'impremis_block_callback',
+            'category'          => 'impremis',
+            'icon'              => 'forms',
+            'keywords'          => array( 'text', 'media', 'text-with-media' ),
+        ));
+
+        // Breeding Program
+        acf_register_block(array(
+            'name'              => 'breeding-program',
+            'title'             => __('Breeding Program'),
+            'description'       => __('A custom Breeding Program block.'),
+            'render_callback'   => 'impremis_block_callback',
+            'category'          => 'impremis',
+            'icon'              => 'list-view',
+            'keywords'          => array( 'text', 'media', 'text-with-media' ),
+        ));
+
     }
 }

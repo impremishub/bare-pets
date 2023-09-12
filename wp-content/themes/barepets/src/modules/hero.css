@@ -150,6 +150,8 @@
         }
     }
     .hero-content {
+        padding-top: 40px;
+        
         .wrapper {
             @apply text-right ml-auto;
             margin-right: 15%;
@@ -168,6 +170,30 @@
                     max-width: 177px;
                 }
             }
+        }
+    }
+}
+
+/* Breeders Program */
+.breeders-banner {
+    .wrapper {
+        margin-left: auto;
+        margin-right: 13%;
+        text-align: left !important;
+    }
+    .hero-content {
+        padding-top: 50px;
+    }
+    .hero-title {
+        color: #fff;
+        font-size: 64px;
+        max-width: 426px;
+        line-height: 70px;
+    }
+
+    &.no-kibbles {
+        img.kibble {
+            @apply hidden;
         }
     }
 }

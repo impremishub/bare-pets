@@ -110,7 +110,7 @@
 
     // HERO SLIDER
     jQuery('.js-hero').owlCarousel({
-        loop: true,
+        loop: ( $('.owl-carousel .items').length > 1 ),
         nav: true,
         dots: true,
         lazyLoad: true,
